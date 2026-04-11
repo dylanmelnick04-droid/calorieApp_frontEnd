@@ -1,24 +1,64 @@
-let username;
-let freezeCount = false;
+const slides = document.querySelectorAll(".slide");
+const dotsContainer = document.querySelector(".dots");
 
-let count = 0;
+let index = 0;
+let intervalId;
 
-document.getElementById("increaseCount").onclick = function(){
-    if (!freezeCount) count ++;
-    document.getElementById("myH1").textContent = `Count: ${count}`
+// CREATE DOTS
+const dots = [];
+
+slides.forEach((_, i) => {
+    const dot = document.createElement("div");
+    dot.classList.add("dot");
+
+    dot.onclick = () => {
+        index = i;
+        showSlide(index);
+        resetAutoSlide();
+    };
+
+    dotsContainer.appendChild(dot);
+    dots.push(dot);
+});
+
+function showSlide(i) {
+    slides.forEach(s => s.classList.remove("active"));
+    dots.forEach(d => d.classList.remove("active"));
+
+    slides[i].classList.add("active");
+    dots[i].classList.add("active");
 }
 
-document.getElementById("freezeCount").onclick = function(){
-    freezeCount = !freezeCount;
-    if (document.getElementById("freezeCount").textContent === "unfreeze count")
-        document.getElementById("freezeCount").textContent = "freeze count"
-    else document.getElementById("freezeCount").textContent = "unfreeze count"
+function nextSlide() {
+    index = (index + 1) % slides.length;
+    showSlide(index);
 }
 
-document.getElementById("decreaseCount").onclick = function(){
-    if (!freezeCount) count --;
-    document.getElementById("myH1").textContent = `Count: ${count}`
+function prevSlide() {
+    index = (index - 1 + slides.length) % slides.length;
+    showSlide(index);
 }
 
-// accountability partner
+function startAutoSlide() {
+    intervalId = setInterval(nextSlide, 5000);
+}
 
+function resetAutoSlide() {
+    clearInterval(intervalId);
+    startAutoSlide();
+}
+
+/* buttons */
+document.querySelector(".next").onclick = () => {
+    nextSlide();
+    resetAutoSlide();
+};
+
+document.querySelector(".prev").onclick = () => {
+    prevSlide();
+    resetAutoSlide();
+};
+
+/* init */
+showSlide(0);
+startAutoSlide();

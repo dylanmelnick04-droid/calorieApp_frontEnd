@@ -1,6 +1,6 @@
 h1 {
   color: red;
-  font-size: 40px;
+  
   font-family: 'Times New Roman', Times, serif;
 }
 
@@ -25,8 +25,28 @@ nav a {
     text-decoration: none;  /* removes underline */
 }
 
+.nav-item a {
+    display: flex;
+    flex-direction: column;  /* stack vertically */
+    align-items: center;     /* center icon + text */
+    text-decoration: none;
+    color: rgb(34, 34, 34);
+    gap: 5px;                /* space between icon and label */
+    line-height: 1;
+}
+.nav-item span {
+    font-size: 12px;
+    line-height: 1;
+}
+.nav-item i {
+    font-size: 25px;
+}
+
+.accountability a {
+    color: blue;
+}
 .home a {
-    color: green;
+    color: black;
 }
 .food a {
     color: orange;
@@ -50,7 +70,6 @@ nav ul {
     padding: 0;
 
     font-family: 'Baloo Bhaina 2';
-    font-size: 40px;
 }
 
 .navbar {
@@ -60,24 +79,202 @@ nav ul {
 
     width: 100%;
     padding: 10px 20px;
-    border-bottom: 1px solid #222;
+    /*border-bottom: 1px solid #222;*/
 }
 
 .left,
 .center,
 .right {
-    display: flex;
+    display:flex;
+    flex:1;
     align-items: center;
-    gap: 40px;
+    gap: 20px;
+    justify-content: flex-end;
+    padding: 0px 40px;
+}
+
+.left {
+    flex:1;
+    justify-content: left;
+    padding: 0px 0px;
+    font-size: 40px;
 }
 
 .center {
     flex: 1;
     justify-content: center;
-    padding: 0px -40px;
+    padding: 0px 0px;
+    font-size: 40px;
 }
 
-.right {
-    justify-content: flex-end;
-    padding: 0px 40px;
+
+.contact a {
+    font-size: 40px;
+}
+
+.userProfile a {
+    font-size: 40px;
+}
+
+.gymOwners a {
+    display: inline-block;
+    padding: 12px 36x;      /* slightly bigger */
+    border-radius: 200px;    /* THIS is the key */
+    border: 2px solid rgb(34, 34, 34);
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+}
+
+.gymOwners a:hover {
+    background-color: black;
+    color: white;
+}
+
+.download a {
+    display: inline-block;
+    padding: 20px 60x;      /* slightly bigger */
+    border-radius: 200px;    /* THIS is the key */
+    border: 2px solid rgb(34, 34, 34);
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+}
+
+.download a:hover {
+    background-color: black;
+    color: white;
+}
+
+.page {
+    color: black;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;        /* vertical centering */
+    justify-content: flex-start; /* push everything left */
+    gap: 0px;                  /* space between title and paragraph */
+    padding-left: 20px;
+    padding-top: 180px;
+}
+.titleDescription {
+    color: black;
+    margin: 0;
+    font-size: clamp(40px, 6vw, 120px);
+}
+
+.motivationalText{
+    margin: 0;
+    font-size: clamp(15px, 1vw, 50px);
+    padding: 0;
+    height: auto;
+    display: block;
+}
+
+body {
+    position: relative;
+}
+
+#getStarted {
+    position: fixed;
+    right: 5px;
+    top: 95%;
+    transform: translateY(-50%);
+    display: inline-block;
+    padding: 5px 5px;
+    border-radius: 500px;
+    border: 2px solid black;
+    background: white;
+    color: black;
+    font-family: 'Baloo Bhaina 2';
+    font-size: 20px;
+    cursor: pointer;
+    text-decoration: none;
+
+}
+
+#getStarted:hover {
+    background-color: black;
+    color: white;
+}
+
+.right-box {
+    position: fixed;
+    right: 10px;
+    top: 45%;
+    transform: translateY(-50%);
+
+    width: 340px;
+    height: 400px;
+
+    background: rgb(200, 200, 200);
+    color: black;
+
+    display: flex;
+    flex-direction: column;   /* stack vertically */
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    margin-top: 40px;
+}
+
+.right-box p {
+    text-align: center;
+    line-height: 1;
+    margin: 0;
+    font-size: 15px;
+}
+.right-box h2 {
+    text-align: center;
+    line-height: 1.2;
+    margin: 0;
+    font-size: 20px;
+}
+
+.slide {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.slide.active {
+    display: block;
+    opacity: 1;
+}
+
+.prev, .next {
+    position: absolute;
+    bottom: 10px;
+
+    background: black;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+.dots {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: flex;
+    gap: 6px;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: gray;
+    cursor: pointer;
+}
+
+.dot.active {
+    background: black;
 }
