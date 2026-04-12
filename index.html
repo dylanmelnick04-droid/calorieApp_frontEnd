@@ -8,56 +8,82 @@
     <link href="https://fonts.googleapis.com/css?family=Baloo+Bhaina+2" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
-<nav class="navbar">
-    <ul class="left">
-        <li class="nav-item"><a href="#home"><i class="fa-solid fa-house"></i><span>Home</span></a></li>
-        <li class="nav-item"><a href="#connectYourGym"><i class="fa-solid fa-magnifying-glass"></i><span>Find Your Gym</span></a></li>
-    </ul>
-    <ul class="center">
-        <li class="nav-item"><a href="#accountability"><i class="fa-solid fa-user-group"></i><span>Accountability</span></a></li>
-        <li class="nav-item"><a href="#foodTracking"><i class="fa-solid fa-carrot"></i><span>Food</span></a></li>
-        <li class="nav-item"><a href="#workouts"><i class="fa-solid fa-dumbbell"></i><span>Workouts</span></a></li>
-    </ul>
-    <ul class="right">
-        <li class=gymOwners>
-            <a href="#gymOwners">Gym Owners</a>
-        </li>
-        <li class=download>
-            <a href="#download">Download</a>
-        </li>
-        <li class="nav-item"><a href="#contact"><i class="fa-solid fa-envelope"></i><span>Contact</span></a></li>
-        <li class="nav-item"><a href="#userProfile"><i class="fa-solid fa-circle-user"></i><span>Profile</span></a></li>
-    </ul>
-</nav>
-<div class="page">
-    <h1 class="titleDescription">Track. Log. Progress.</h1>
-    <p class="motivationalText">Champions don't just wake up with medals.</p>
-</div>
-<div class="right-box">
-
-    <div class="slide active">
-        <p>Introducing</p>
-        <h2 class="togetherProject">THE TOGETHER PROJECT</h2>
-        <p>our new accountability program</p>
-    </div>
-
-    <div class="slide">
-        <h2>All your needs in one package</h2>
-        <p>Tracking - Logging - Feed</p>
-    </div>
-
-    <div class="slide">
-        <h2>Have a gym?</h2>
-        <p>Create a community, post announcements and promotions, and manage all your class sign-in here.</p>
-    </div>
-
-    <button class="prev">←</button>
-    <button class="next">→</button>
-    <div class="dots"></div>
-
-</div>
-<button id="getStarted">Get Started</button>
 <body>
+    <section id="home" class="section active">
+        <nav class="navbar">
+            <ul class="left">
+                <li class="nav-item"><a href="#home"><i class="fa-solid fa-house"></i><span>Home</span></a></li>
+                <li class="nav-item"><a href="#connectYourGym"><i class="fa-solid fa-magnifying-glass"></i><span>Find Your Gym</span></a></li>
+            </ul>
+            <ul class="center">
+                <li class="nav-item"><a href="#accountability"><i class="fa-solid fa-user-group"></i><span>Accountability</span></a></li>
+                <li class="nav-item"><a href="#foodTracking"><i class="fa-solid fa-carrot"></i><span>Food</span></a></li>
+                <li class="nav-item"><a href="#workouts"><i class="fa-solid fa-dumbbell"></i><span>Workouts</span></a></li>
+            </ul>
+            <ul class="right">
+                <li class=gymOwners>
+                    <a href="#gymOwners">Gym Owners</a>
+                </li>
+                <li class=download>
+                    <a href="#download">Download</a>
+                </li>
+                <li class="nav-item"><a href="#contact"><i class="fa-solid fa-envelope"></i><span>Contact</span></a></li>
+                <li class="nav-item"><a href="#login"><i class="fa-solid fa-circle-user"></i><span>Profile</span></a></li>
+            </ul>
+        </nav>
+        <div class="page">
+            <h1 class="titleDescription">Track. Log. Progress.</h1>
+            <p class="motivationalText">Champions don't just wake up with medals.</p>
+        </div>
+        <div class="right-box">
+
+            <div class="slide active">
+                <p>Introducing</p>
+                <h2 class="togetherProject">THE TOGETHER PROJECT</h2>
+                <p>our new accountability program</p>
+            </div>
+
+            <div class="slide">
+                <h2>All your needs in one package</h2>
+                <p>Tracking - Logging - Feed</p>
+            </div>
+
+            <div class="slide">
+                <h2>Have a gym?</h2>
+                <p>Create a community, post announcements and promotions, and manage all your class sign-in here.</p>
+            </div>
+
+            <button class="prev">←</button>
+            <button class="next">→</button>
+            <div class="dots"></div>
+
+        </div>
+        <button id="getStarted">Get Started</button>
+    </section>
+
+    <section id="connectYourGym" class="section"></section>
+
+    <section id="accountability" class="section"></section>
+
+    <section id="foodTracking" class="section"></section>
+
+    <section id="workouts" class="section"></section>
+
+    <section id="contact" class="section"></section>
+
+    <section id="login" class="section">
+        <!-- Your login form -->
+        <h1 class="login-header">Login</h1>
+        <form class="loginForm">
+            <input class="loginUsername" type="text" placeholder="Mobile number or email">
+            <input class="loginPassword" type="password" placeholder="Password">
+            <button id="login-button" type="submit">Log in</button>
+            <button id="forgot-password-button" type="submit">Forgot password</button>
+            <button id="no-account-button" type="submit">Create an account</button>
+            <button id="return-home-button" type="submit">Home<a href="#home" class="login-btn"></a></button>
+        </form>
+    </section>
+
     <script src="index.js"></script>
 </body>
 </html>
