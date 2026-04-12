@@ -1,1 +1,1 @@
-This project has taken roughly `3` hours.
+This project has taken roughly `6` hours.
