@@ -2,9 +2,12 @@
 body {
     background-color: lightgray;
     margin: 0;
-    overflow: hidden;
 
 }
+
+/*body.app{
+    overflow: hidden;
+}*/
 
 nav a {
     text-decoration: none;  /* removes underline */
@@ -75,8 +78,8 @@ nav ul {
 
 .gymOwners a {
     display: inline-block;
-    padding: 12px 36x;      /* slightly bigger */
-    border-radius: 200px;    /* THIS is the key */
+    padding: 0px 10px;
+    border-radius: 35px;
     border: 2px solid rgb(34, 34, 34);
     background-color: rgb(34, 34, 34);
     text-decoration: none;
@@ -91,8 +94,8 @@ nav ul {
 
 .download a {
     display: inline-block;
-    padding: 20px 60x;      /* slightly bigger */
-    border-radius: 200px;    /* THIS is the key */
+    padding: 0px 10px;
+    border-radius: 20px;
     border: 2px solid rgb(34, 34, 34);
     background-color: rgb(34, 34, 34);
     text-decoration: none;
@@ -342,11 +345,6 @@ body {
 }
 
 #login {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 12px;
-
     width: 400px;
     margin: 100px auto;
     padding: 20px 0 30px;
@@ -355,6 +353,66 @@ body {
     background: white;
     font-family: 'Baloo Bhaina 2';
 }
+
+#login.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+/* WORKOUTS PAGE */
+
+.workout-table {
+    border: 2px solid rgb(34, 34, 34);
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 80%;
+    margin: 0 auto;
+    font-family: 'Baloo Bhaina 2';
+}
+
+.workout-table th,
+.workout-table td {
+    padding: 8px;
+    text-align: center;
+    border-bottom: 1px solid #222;
+}
+
+.date-row td {
+    font-weight: bold;
+    background: #eee;
+    text-align: left;
+}
+
+#workouts.active{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.nav-item-workout-nav {
+    margin: 20px;
+    list-style: none;
+    font-size: 16px;
+    border: 2px solid rgb(34, 34, 34);
+    border-radius: 25px;
+    background: rgb(34, 34, 34);
+}
+
+.nav-item-workout-nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.workout-table tr:last-child td {
+    border-bottom: none;
+}
+
 
 
 .section {

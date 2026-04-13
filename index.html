@@ -16,9 +16,9 @@
                 <li class="nav-item"><a href="#connectYourGym"><i class="fa-solid fa-magnifying-glass"></i><span>Find Your Gym</span></a></li>
             </ul>
             <ul class="center">
-                <li class="nav-item"><a href="#accountability"><i class="fa-solid fa-user-group"></i><span>Accountability</span></a></li>
                 <li class="nav-item"><a href="#foodTracking"><i class="fa-solid fa-carrot"></i><span>Food</span></a></li>
                 <li class="nav-item"><a href="#workouts"><i class="fa-solid fa-dumbbell"></i><span>Workouts</span></a></li>
+                <li class="nav-item"><a href="#accountability"><i class="fa-solid fa-user-group"></i><span>Accountability</span></a></li>
             </ul>
             <ul class="right">
                 <li class=gymOwners>
@@ -34,6 +34,7 @@
         <div class="page">
             <h1 class="titleDescription">Track. Log. Progress.</h1>
             <p class="motivationalText">Champions don't just wake up with medals.</p>
+            <p class="motivationalText">Earn it.</p>
         </div>
         <div class="right-box">
 
@@ -50,7 +51,7 @@
 
             <div class="slide">
                 <h2>Have a gym?</h2>
-                <p>Create a community, post announcements and promotions, and manage all your class sign-in here.</p>
+                <p>Create a community, post announcements, promote your products, and manage all your class registry here.</p>
             </div>
 
             <button class="prev">←</button>
@@ -67,20 +68,103 @@
 
     <section id="foodTracking" class="section"></section>
 
-    <section id="workouts" class="section"></section>
+    <section id="workouts" class="section">
+        <nav class="workout-navbar">
+            <ul>
+                <li class="nav-item-workout-nav"><a href="#home"><span>Daily Log</span></a></li>
+                <li class="nav-item-workout-nav"><a href="#home"><span>Monthly View</span></a></li>
+                <li class="nav-item-workout-nav"><a href="#home"><span>Yearly View</span></a></li>
+                <li class="nav-item-workout-nav"><a href="#home"><span>PRs and Social</span></a></li>
+            </ul>    
+        </nav>
+
+        <table class="workout-table">
+            <tr class="date-row">
+                <td colspan="4">April 12, 2026</td>
+            </tr>
+
+            <tr>
+                <th>Exercise</th>
+                <th>Reps</th>
+                <th>Weight</th>
+                <th>Notes</th>
+            </tr>
+
+            <tr>
+                <td>Bench Press</td>
+                <td>8</td>
+                <td>185</td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>Squat</td>
+                <td>5</td>
+                <td>225</td>
+                <td></td>
+            </tr>
+            <tr class="date-row">
+                <td colspan="4">April 10, 2026</td>
+            </tr>
+
+            <tr>
+                <th>Exercise</th>
+                <th>Reps</th>
+                <th>Weight</th>
+                <th>Notes</th>
+            </tr>
+
+            <tr>
+                <td>Bench Press</td>
+                <td>8</td>
+                <td>185</td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>Squat</td>
+                <td>5</td>
+                <td>225</td>
+                <td></td>
+            </tr>
+            <tr class="date-row">
+                <td colspan="4">April 8, 2026</td>
+            </tr>
+
+            <tr>
+                <th>Exercise</th>
+                <th>Reps</th>
+                <th>Weight</th>
+                <th>Notes</th>
+            </tr>
+
+            <tr>
+                <td>Bench Press</td>
+                <td>8</td>
+                <td>185</td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>Squat</td>
+                <td>5</td>
+                <td>225</td>
+                <td></td>
+            </tr>
+        </table>
+    </section>
 
     <section id="contact" class="section"></section>
 
     <section id="login" class="section">
-        <!-- Your login form -->
         <h1 class="login-header">Login</h1>
         <form class="loginForm">
             <input class="loginUsername" type="text" placeholder="Mobile number or email">
             <input class="loginPassword" type="password" placeholder="Password">
             <button id="login-button" type="submit">Log in</button>
-            <button id="forgot-password-button" type="submit">Forgot password</button>
-            <button id="no-account-button" type="submit">Create an account</button>
-            <button id="return-home-button" type="submit">Home<a href="#home" class="login-btn"></a></button>
+            <button id="forgot-password-button" type="button">Forgot password</button>
+            <button id="no-account-button" type="button">Create an account</button>
+            <button id="return-home-button" type="button">Home</button>
         </form>
     </section>
 

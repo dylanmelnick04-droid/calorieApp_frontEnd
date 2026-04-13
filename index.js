@@ -1,3 +1,5 @@
+document.body.classList.add("app");
+
 const slides = document.querySelectorAll(".slide");
 const dotsContainer = document.querySelector(".dots");
 
@@ -71,8 +73,15 @@ links.forEach(link => {
         e.preventDefault();
 
         const target = link.getAttribute("href").substring(1);
+        const targetSection = document.getElementById(target);
+
+        if (!targetSection) return;
 
         sections.forEach(sec => sec.classList.remove("active"));
-        document.getElementById(target).classList.add("active");
+        targetSection.classList.add("active");
+        console.log("ACTIVE SECTIONS:");
+        document.querySelectorAll(".section.active").forEach(s => {
+            console.log(s.id);
+        });
     });
 });
