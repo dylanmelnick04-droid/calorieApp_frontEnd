@@ -85,3 +85,18 @@ links.forEach(link => {
         });
     });
 });
+
+const text = document.getElementById("weightText");
+const input = document.getElementById("weightInput");
+
+text.addEventListener("click", () => {
+    text.style.display = "none";
+    input.style.display = "inline";
+    input.focus();
+});
+
+input.addEventListener("blur", () => {
+    text.textContent = input.value;
+    input.style.display = "none";
+    text.style.display = "inline";
+});
